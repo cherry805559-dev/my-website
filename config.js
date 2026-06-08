@@ -1,4 +1,1 @@
-window.ORDER_BACKEND = {
-  supabaseUrl: "",
-  supabaseAnonKey: ""
-};
+window.LINE_URL = "";

@@ -16,7 +16,7 @@
     <nav class="nav" aria-label="主要導覽">
       <a href="index.html#about">關於我們</a>
       <a href="works.html">作品展示</a>
-      <a href="#order">下單詢問</a>
+      <a class="line-link" href="#">LINE 詢問</a>
       <a href="index.html#services">服務項目</a>
       <a href="index.html#contact">聯絡我們</a>
     </nav>
@@ -32,103 +32,72 @@
     </section>
 
     <section class="section category-section">
-      <div class="category-layout">
-        <section class="category-panel works" id="blessing">
-          <div class="category-heading">
-            <div>
-              <p class="eyebrow">Blessing</p>
-              <h2>神明祝壽</h2>
-              <p>適合神明聖誕、宮廟祝壽、敬獻供奉與節慶賀禮，呈現莊重、喜氣與心意。</p>
-            </div>
-            <a class="button small" href="#order" data-product="好神花">我要祝壽作品</a>
-          </div>
-          <div class="category-work-list">
-            <article class="work-card featured-work">
-              <img class="work-photo" src="images/haoshenhua.jpg" alt="好神花神明祝壽紙藝">
-              <div class="work-body">
-                <p class="work-category">神明祝壽</p>
-                <h3>好神花</h3>
-                <p>神明祝壽專用紙藝花禮，適合神明聖誕、宮廟祝壽、敬獻供奉等場合，可依需求調整花色、數量與敬賀文字。</p>
-                <a class="button small" href="#order" data-product="好神花">我要下單</a>
-              </div>
-            </article>
-            <article class="work-card">
-              <div class="work-image">上傳作品照片</div>
-              <div class="work-body">
-                <p class="work-category">神明祝壽</p>
-                <h3>客製祝壽花禮</h3>
-                <p>可依神明聖誕、廟方需求與現場規格規劃合適作品。</p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="category-panel remembrance" id="remembrance">
-          <div class="category-heading">
-            <div>
-              <p class="eyebrow">Remembrance</p>
-              <h2>弔念追思</h2>
-              <p>適合追思、祭祀、祖先供奉與慎終追遠場合，可依需求製作莊重體面的紙藝供品。</p>
-            </div>
-            <a class="button small" href="#order" data-product="一桶金">我要追思作品</a>
-          </div>
-          <div class="category-work-list">
-            <article class="work-card featured-work">
-              <img class="work-photo" src="images/yitongjin.jpg" alt="一桶金金紙藝品">
-              <div class="work-body">
-                <p class="work-category">弔念追思</p>
-                <h3>一桶金</h3>
-                <p>適合祭祀、節慶、供奉與追思場合，可依需求調整尺寸與樣式。</p>
-                <a class="button small" href="#order" data-product="一桶金">我要下單</a>
-              </div>
-            </article>
-            <article class="work-card">
-              <div class="work-image">上傳作品照片</div>
-              <div class="work-body">
-                <p class="work-category">弔念追思</p>
-                <h3>客製追思供品</h3>
-                <p>依照客人提供的用途、照片或想法製作，適合特殊需求與紀念作品。</p>
-              </div>
-            </article>
-          </div>
-        </section>
+      <div class="category-button-grid" aria-label="作品分類">
+        <a class="category-button-card" href="#blessing">
+          <h2>神明敬獻・祝壽供品</h2>
+          <p>神明祝壽、還願、安座、入火、答謝等敬奉</p>
+        </a>
+        <a class="category-button-card" href="#remembrance">
+          <h2>弔念祭祖・追思供花</h2>
+          <p>祭祖、追思、清明、中元、祖先、告別式等敬奉</p>
+        </a>
       </div>
     </section>
 
-    <section id="order" class="section order-section">
+    <section class="section works" id="blessing">
       <div class="section-heading">
-        <p class="eyebrow">Order</p>
-        <h2>下單詢問</h2>
-        <p>請留下基本資料與需求。送出後會建立訂單；若資料庫尚未設定，會先開啟 Email 草稿。</p>
+        <p class="eyebrow">Blessing</p>
+        <h2>神明祝壽</h2>
+        <p>適合神明聖誕、宮廟祝壽、敬獻供奉與節慶賀禮，呈現莊重、喜氣與心意。</p>
       </div>
-      <form class="order-form" id="orderForm">
-        <label>
-          商品名稱
-          <input name="product" type="text" value="一桶金" required>
-        </label>
-        <label>
-          姓名
-          <input name="name" type="text" placeholder="請輸入姓名" required>
-        </label>
-        <label>
-          聯絡電話
-          <input name="phone" type="tel" placeholder="請輸入電話或手機" required>
-        </label>
-        <label>
-          數量
-          <input name="quantity" type="number" min="1" value="1" required>
-        </label>
-        <label>
-          需要日期
-          <input name="date" type="date">
-        </label>
-        <label>
-          備註需求
-          <textarea name="message" rows="5" placeholder="例如：用途、尺寸、樣式、送達地點或其他客製需求"></textarea>
-        </label>
-        <button class="button primary" type="submit">送出詢問</button>
-      </form>
+      <div class="work-grid">
+        <article class="work-card featured-work">
+          <img class="work-photo" src="images/haoshenhua.jpg" alt="好神花神明祝壽紙藝">
+          <div class="work-body">
+            <p class="work-category">神明祝壽</p>
+            <h3>好神花</h3>
+            <p>神明祝壽專用紙藝花禮，適合神明聖誕、宮廟祝壽、敬獻供奉等場合，可依需求調整花色、數量與敬賀文字。</p>
+            <a class="button small line-link" href="#">加 LINE 詢問</a>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-image">上傳作品照片</div>
+          <div class="work-body">
+            <p class="work-category">神明祝壽</p>
+            <h3>客製祝壽花禮</h3>
+            <p>可依神明聖誕、廟方需求與現場規格規劃合適作品。</p>
+          </div>
+        </article>
+      </div>
     </section>
+
+    <section class="section remembrance" id="remembrance">
+      <div class="section-heading">
+        <p class="eyebrow">Remembrance</p>
+        <h2>弔念追思</h2>
+        <p>適合追思、祭祀、祖先供奉與慎終追遠場合，可依需求製作莊重體面的紙藝供品。</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card featured-work">
+          <img class="work-photo" src="images/yitongjin.jpg" alt="一桶金金紙藝品">
+          <div class="work-body">
+            <p class="work-category">弔念追思</p>
+            <h3>一桶金</h3>
+            <p>適合祭祀、節慶、供奉與追思場合，可依需求調整尺寸與樣式。</p>
+            <a class="button small line-link" href="#">加 LINE 詢問</a>
+          </div>
+        </article>
+        <article class="work-card">
+          <div class="work-image">上傳作品照片</div>
+          <div class="work-body">
+            <p class="work-category">弔念追思</p>
+            <h3>客製追思供品</h3>
+            <p>依照客人提供的用途、照片或想法製作，適合特殊需求與紀念作品。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
