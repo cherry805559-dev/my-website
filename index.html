@@ -9,14 +9,13 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="金鼎盛金紙藝品商行首頁">
+    <a class="brand" href="index.html" aria-label="金鼎盛金紙藝品商行首頁">
       <span class="brand-mark">金</span>
       <span>金鼎盛金紙藝品商行</span>
     </a>
     <nav class="nav" aria-label="主要導覽">
       <a href="#about">關於我們</a>
-      <a href="#works">作品展示</a>
-      <a href="#order">下單詢問</a>
+      <a href="works.html">作品展示</a>
       <a href="#services">服務項目</a>
       <a href="#contact">聯絡我們</a>
     </nav>
@@ -29,8 +28,8 @@
         <h1>金鼎盛金紙藝品商行</h1>
         <p class="lead">專營金紙藝品、祭祀用品與客製紙藝製作，依照用途、尺寸與需求細心打造，讓每一份心意都莊重體面。</p>
         <div class="hero-actions">
-          <a class="button primary" href="#works">查看作品</a>
-          <a class="button secondary" href="#order">我要下單</a>
+          <a class="button primary" href="works.html">查看作品</a>
+          <a class="button secondary" href="#contact">聯絡詢問</a>
         </div>
       </div>
     </section>
@@ -38,100 +37,9 @@
     <section id="about" class="section">
       <div class="section-heading">
         <p class="eyebrow">About</p>
-        <h2>關於金鼎盛金紙藝品商行</h2>
+        <h2>關於我們</h2>
       </div>
-      <p>我們重視每一件紙藝作品的細節與用途，從傳統祭祀、節慶供品到特殊客製，都以穩妥的工法與清楚的溝通完成。歡迎提供照片、尺寸或想法，由我們協助規劃合適的作品。</p>
-    </section>
-
-    <section id="works" class="section works">
-      <div class="section-heading">
-        <p class="eyebrow">Works</p>
-        <h2>作品展示</h2>
-        <p>精選作品可依需求調整尺寸、樣式與數量。若需要客製，請先填寫下單詢問表單，我們會再與您確認細節。</p>
-      </div>
-      <div class="work-grid">
-        <article class="work-card featured-work">
-          <img class="work-photo" src="images/yitongjin.jpg" alt="一桶金金紙藝品">
-          <div class="work-body">
-            <p class="work-category">金紙藝品</p>
-            <h3>一桶金</h3>
-            <p>適合祭祀、節慶、供奉與祝壽場合，可依需求調整尺寸與樣式。</p>
-            <a class="button small" href="#order" data-product="一桶金">我要下單</a>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="work-image">上傳作品照片</div>
-          <div class="work-body">
-            <h3>客製紙藝</h3>
-            <p>依照客人提供的用途、照片或想法製作，適合特殊需求與紀念作品。</p>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="work-image">上傳作品照片</div>
-          <div class="work-body">
-            <h3>祭祀供品</h3>
-            <p>莊重體面的紙藝供品，適合法會、普渡、祭祖與各式傳統儀式。</p>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="work-image">上傳作品照片</div>
-          <div class="work-body">
-            <h3>節慶紙藝</h3>
-            <p>配合節慶、廟會與祝賀用途製作，呈現喜氣、細緻與完整度。</p>
-          </div>
-        </article>
-        <article class="work-card">
-          <img class="work-photo" src="images/haoshenhua.jpg" alt="好神花神明祝壽紙藝">
-          <div class="work-body">
-            <p class="work-category">神明祝壽</p>
-            <h3>好神花</h3>
-            <p>神明祝壽專用紙藝花禮，適合神明聖誕、宮廟祝壽、敬獻供奉等場合，可依需求調整花色、數量與敬賀文字。</p>
-            <a class="button small" href="#order" data-product="好神花">我要下單</a>
-          </div>
-        </article>
-        <article class="work-card">
-          <div class="work-image">上傳作品照片</div>
-          <div class="work-body">
-            <h3>特殊訂製</h3>
-            <p>不確定怎麼選也可以先詢問，我們會依用途、預算與交期建議。</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="order" class="section order-section">
-      <div class="section-heading">
-        <p class="eyebrow">Order</p>
-        <h2>下單詢問</h2>
-        <p>請留下基本資料與需求。送出後會開啟 Email 草稿，您確認內容後寄出即可。</p>
-      </div>
-      <form class="order-form" id="orderForm">
-        <label>
-          商品名稱
-          <input name="product" type="text" value="一桶金" required>
-        </label>
-        <label>
-          姓名
-          <input name="name" type="text" placeholder="請輸入姓名" required>
-        </label>
-        <label>
-          聯絡電話
-          <input name="phone" type="tel" placeholder="請輸入電話或手機" required>
-        </label>
-        <label>
-          數量
-          <input name="quantity" type="number" min="1" value="1" required>
-        </label>
-        <label>
-          需要日期
-          <input name="date" type="date">
-        </label>
-        <label>
-          備註需求
-          <textarea name="message" rows="5" placeholder="例如：用途、尺寸、樣式、送達地點或其他客製需求"></textarea>
-        </label>
-        <button class="button primary" type="submit">送出詢問</button>
-      </form>
+      <p>金鼎盛金紙藝品商行重視每一件紙藝作品的細節與用途，從傳統祭祀、節慶供品到特殊客製，都以穩妥的工法與清楚的溝通完成。歡迎提供照片、尺寸或想法，由我們協助規劃合適的作品。</p>
     </section>
 
     <section id="services" class="section muted">
@@ -155,6 +63,15 @@
       </div>
     </section>
 
+    <section class="section works-preview">
+      <div class="section-heading">
+        <p class="eyebrow">Works</p>
+        <h2>作品展示另外整理成一頁</h2>
+        <p>為了讓首頁更好閱讀，作品已整理到獨立頁面。客人可以從上方選單或下方按鈕前往查看。</p>
+      </div>
+      <a class="button primary" href="works.html">前往作品展示</a>
+    </section>
+
     <section id="contact" class="section contact">
       <div>
         <p class="eyebrow">Contact</p>
@@ -171,8 +88,6 @@
 
   <button class="back-to-top" id="backToTop" type="button" aria-label="回到最上方">↑</button>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -47,14 +47,6 @@ if (orderForm) {
     const quantity = formData.get("quantity") || "";
     const date = formData.get("date") || "";
     const message = formData.get("message") || "";
-    const payload = {
-      product,
-      name,
-      phone,
-      quantity,
-      date,
-      message
-    };
 
     if (supabaseClient) {
       const { error } = await supabaseClient.from("orders").insert({
