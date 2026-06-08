@@ -22,4 +22,10 @@ GitHub Pages 會以 `index.html` 作為首頁。
 images/yitongjin.jpg
 ```
 
+作品「好神花」會讀取：
+
+```txt
+images/haoshenhua.jpg
+```
+
 首頁已新增「下單詢問」表單。預設會開啟寄給 `hello@example.com` 的 Email 草稿；正式使用前請將 `index.html` 和 `script.js` 裡的 Email 改成店家的收件信箱。

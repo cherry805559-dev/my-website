@@ -6,6 +6,16 @@ if (year) {
 
 const orderForm = document.querySelector("#orderForm");
 
+document.querySelectorAll("[data-product]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const productInput = document.querySelector("input[name='product']");
+
+    if (productInput) {
+      productInput.value = button.dataset.product || "";
+    }
+  });
+});
+
 if (orderForm) {
   orderForm.addEventListener("submit", (event) => {
     event.preventDefault();
