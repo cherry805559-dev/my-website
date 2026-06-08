@@ -159,6 +159,15 @@ h3 {
   color: var(--brand-dark);
 }
 
+.button.small {
+  min-height: 40px;
+  margin-top: 6px;
+  padding: 8px 16px;
+  background: var(--brand);
+  color: #fff;
+  font-size: 15px;
+}
+
 .section {
   padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 72px);
 }
@@ -213,8 +222,63 @@ h3 {
   font-weight: 900;
 }
 
+.work-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--surface-muted);
+}
+
 .work-body {
   padding: 24px;
+}
+
+.work-category {
+  margin-bottom: 6px;
+  color: var(--brand-dark);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.order-section {
+  background: var(--surface);
+}
+
+.order-form {
+  display: grid;
+  max-width: 920px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.order-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 900;
+}
+
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 13px 14px;
+  background: #fff;
+  color: var(--text);
+  font: inherit;
+}
+
+.order-form textarea,
+.order-form button {
+  grid-column: 1 / -1;
+}
+
+.order-form input:focus,
+.order-form textarea:focus {
+  border-color: var(--brand);
+  outline: 3px solid rgba(159, 106, 34, 0.18);
 }
 
 .card p,
@@ -260,6 +324,10 @@ h3 {
   }
 
   .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-form {
     grid-template-columns: 1fr;
   }
 }

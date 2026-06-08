@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>金鼎盛金紙藝品商行</title>
-  <meta name="description" content="金鼎盛金紙藝品商行官方網站">
+  <meta name="description" content="金鼎盛金紙藝品商行官方網站，提供金紙藝品、祭祀用品與客製紙藝製作。">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
     <nav class="nav" aria-label="主要導覽">
       <a href="#about">關於我們</a>
       <a href="#works">作品展示</a>
+      <a href="#order">下單詢問</a>
       <a href="#services">服務項目</a>
       <a href="#contact">聯絡我們</a>
     </nav>
@@ -29,7 +30,7 @@
         <p class="lead">專營金紙藝品、祭祀用品與客製紙藝製作，依照用途、尺寸與需求細心打造，讓每一份心意都莊重體面。</p>
         <div class="hero-actions">
           <a class="button primary" href="#works">查看作品</a>
-          <a class="button secondary" href="#contact">詢問客製</a>
+          <a class="button secondary" href="#order">我要下單</a>
         </div>
       </div>
     </section>
@@ -46,14 +47,16 @@
       <div class="section-heading">
         <p class="eyebrow">Works</p>
         <h2>作品展示</h2>
-        <p>以下先放精選作品分類，你可以把照片換成實際成品，讓客人快速了解款式、用途與可客製方向。</p>
+        <p>精選作品可依需求調整尺寸、樣式與數量。若需要客製，請先填寫下單詢問表單，我們會再與您確認細節。</p>
       </div>
       <div class="work-grid">
-        <article class="work-card">
-          <div class="work-image">上傳作品照片</div>
+        <article class="work-card featured-work">
+          <img class="work-photo" src="images/yitongjin.jpg" alt="一桶金金紙藝品">
           <div class="work-body">
-            <h3>金紙藝品</h3>
+            <p class="work-category">金紙藝品</p>
+            <h3>一桶金</h3>
             <p>適合祭祀、節慶、供奉與祝壽場合，可依需求調整尺寸與樣式。</p>
+            <a class="button small" href="#order" data-product="一桶金">我要下單</a>
           </div>
         </article>
         <article class="work-card">
@@ -92,6 +95,41 @@
           </div>
         </article>
       </div>
+    </section>
+
+    <section id="order" class="section order-section">
+      <div class="section-heading">
+        <p class="eyebrow">Order</p>
+        <h2>下單詢問</h2>
+        <p>請留下基本資料與需求。送出後會開啟 Email 草稿，您確認內容後寄出即可。</p>
+      </div>
+      <form class="order-form" id="orderForm">
+        <label>
+          商品名稱
+          <input name="product" type="text" value="一桶金" required>
+        </label>
+        <label>
+          姓名
+          <input name="name" type="text" placeholder="請輸入姓名" required>
+        </label>
+        <label>
+          聯絡電話
+          <input name="phone" type="tel" placeholder="請輸入電話或手機" required>
+        </label>
+        <label>
+          數量
+          <input name="quantity" type="number" min="1" value="1" required>
+        </label>
+        <label>
+          需要日期
+          <input name="date" type="date">
+        </label>
+        <label>
+          備註需求
+          <textarea name="message" rows="5" placeholder="例如：用途、尺寸、樣式、送達地點或其他客製需求"></textarea>
+        </label>
+        <button class="button primary" type="submit">送出詢問</button>
+      </form>
     </section>
 
     <section id="services" class="section muted">
