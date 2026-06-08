@@ -1,1 +1,4 @@
-window.ORDER_API_URL = "";
+window.ORDER_BACKEND = {
+  supabaseUrl: "",
+  supabaseAnonKey: ""
+};

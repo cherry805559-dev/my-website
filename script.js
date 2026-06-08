@@ -4,7 +4,27 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+const backToTop = document.querySelector("#backToTop");
+
+if (backToTop) {
+  window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("is-visible", window.scrollY > 360);
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
+
 const orderForm = document.querySelector("#orderForm");
+const backend = window.ORDER_BACKEND || {};
+const hasSupabase = backend.supabaseUrl && backend.supabaseAnonKey && window.supabase;
+const supabaseClient = hasSupabase
+  ? window.supabase.createClient(backend.supabaseUrl, backend.supabaseAnonKey)
+  : null;
 
 document.querySelectorAll("[data-product]").forEach((button) => {
   button.addEventListener("click", () => {
@@ -17,7 +37,7 @@ document.querySelectorAll("[data-product]").forEach((button) => {
 });
 
 if (orderForm) {
-  orderForm.addEventListener("submit", (event) => {
+  orderForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const formData = new FormData(orderForm);
@@ -36,19 +56,25 @@ if (orderForm) {
       message
     };
 
-    if (window.ORDER_API_URL) {
-      fetch(window.ORDER_API_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
+    if (supabaseClient) {
+      const { error } = await supabaseClient.from("orders").insert({
+        product,
+        customer_name: name,
+        phone,
+        quantity: Number(quantity),
+        needed_date: date || null,
+        note: message,
+        status: "新訂單"
       });
 
-      alert("已送出詢問，我們會盡快與您聯絡。");
-      orderForm.reset();
-      orderForm.product.value = product;
+      if (!error) {
+        alert("已送出詢問，我們會盡快與您聯絡。");
+        orderForm.reset();
+        orderForm.product.value = product;
+        return;
+      }
+
+      alert("送出失敗，請稍後再試或直接聯絡店家。");
       return;
     }
 
