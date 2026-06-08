@@ -15,7 +15,7 @@ GitHub Pages 會以 `index.html` 作為首頁。
 ## 頁面結構
 
 - `index.html`：首頁，包含關於我們、服務項目與聯絡方式
-- `works.html`：作品展示與下單詢問
+- `works.html`：作品展示與下單詢問，分為神明祝壽、弔念追思兩大類
 
 ## 作品照片
 
