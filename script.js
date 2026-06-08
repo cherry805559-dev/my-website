@@ -27,6 +27,30 @@ if (orderForm) {
     const quantity = formData.get("quantity") || "";
     const date = formData.get("date") || "";
     const message = formData.get("message") || "";
+    const payload = {
+      product,
+      name,
+      phone,
+      quantity,
+      date,
+      message
+    };
+
+    if (window.ORDER_API_URL) {
+      fetch(window.ORDER_API_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      alert("已送出詢問，我們會盡快與您聯絡。");
+      orderForm.reset();
+      orderForm.product.value = product;
+      return;
+    }
 
     const subject = `下單詢問：${product}`;
     const body = [
